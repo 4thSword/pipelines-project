@@ -17,6 +17,7 @@ def authRequest(url, params=()):
 
 
 def addtwitchId(serie):
+    #checks if players in a list are in twitch and returns IDs
     url= 'https://api.twitch.tv/helix/users?login='
     twitch=[]
     for player in serie:
