@@ -9,18 +9,18 @@ dotenv.load_dotenv()
 TOKEN = os.getenv("ID")
 
 #Dataframe load:
-clears = pd.read_csv('input/clears.csv')
-course_meta = pd.read_csv('input/course-meta.csv')
-courses = pd.read_csv('input/courses.csv', sep='\t')
-likes = pd.read_csv('input/likes.csv')
-players = pd.read_csv('input/players.csv', sep='\t')
-plays = pd.read_csv('input/plays.csv')
+#clears = pd.read_csv('../input/clears.csv')
+#course_meta = pd.read_csv('../input/course-meta.csv')
+courses = pd.read_csv('../input/courses.csv', sep='\t')
+#likes = pd.read_csv('../input/likes.csv')
+#players = pd.read_csv('../input/players.csv', sep='\t')
+#plays = pd.read_csv('../input/plays.csv')
 
 #global constants:
 DIFFICULTY = {
-    'e': 'easy'
-    'n': 'normal'
-    'x': 'expert'
+    'e': 'easy',
+    'n': 'normal',
+    'x': 'expert',
     's': 'superExpert'
 }
 STYLE={
@@ -32,9 +32,8 @@ STYLE={
 
 #Functions to filter an porcess data
 
-def filtercoursesby(s,d):
+def filtercoursesby(st,d):
     # Select a sub Dataframe and filter it by style an difficulty
-    
-    df = courses[(courses['difficulty']== difficulty[d].value) & (courses['gameStyle'] == style[s].value)]
+    df = courses[(courses['difficulty']== DIFFICULTY[d]) & (courses['gameStyle'] == STYLE[st])]
     return df
 

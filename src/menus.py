@@ -21,5 +21,5 @@ def main_menu(arg1=None,arg2=None):
         submenu_sorts(subdf,game_style,difficulty)
         
 
-def submenu_sorts(subdf,game_style,difficulty):
-    display_submenu_sorts(game_Style,difficulty)
+def submenu_sorts(subdf,gamestyle,difficulty):
+    display_submenu_sorts(gamestyle,difficulty)
