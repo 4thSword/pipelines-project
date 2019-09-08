@@ -31,6 +31,11 @@ STYLE={
     'w': 'marioWorld',
     'u': 'marioBrosU'
 }
+SORT ={
+    'l':'likes',
+    'm': 'Most Finished',
+    's': 'Less Finished'
+}
 
 #Functions to filter an porcess data
 
@@ -39,13 +44,13 @@ def filtercoursesby(st,d):
     df = fullinfo[(fullinfo['difficulty']== DIFFICULTY[d]) & (fullinfo['gameStyle'] == STYLE[st])]
     return df
 
-def sortbycategory(df,sort):
-    sort = sort.lower()
-    if sort == 'm':
+def sortbycategory(df,choice):
+    choice = choice.lower()
+    if choice == 'm':
         return df.sort_values(by=['clears'],ascending=False)
-    elif sort == 's':
+    elif choice == 's':
         return df.sort_values(by=['clears'])
-    elif sort == 'l':
+    elif choice == 'l':
         return df.sort_values(by=['likes'],ascending=False)
     else:
         return False
