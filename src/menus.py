@@ -1,6 +1,7 @@
 #imports:
-from ./display_menus.py import *
+from display_menus import *
 import argparse
+
 
 #Main Menu:
 
@@ -10,10 +11,14 @@ def main_menu(arg1=None,arg2=None):
         display_mainmenu()
         #get parameters:
         difficulty = input("Type difficulty code:")
-        game_style = input("Type difficulty code:")
-        
-       
+        game_style = input("Type game style code:")
+        subdf = filtercoursesby(game_style,difficulty)
+        submenu_sorts(subdf,game_style,difficulty)
     else:
-        submenu_sorts(arg1,arg2)
+        difficulty = arg1
+        game_style = arg2
+        subdf = filtercoursesby(game_style,difficulty)
+        submenu_sorts(subdf,game_style,difficulty)
+        
 
-
+def submenu_sorts(subdf,game_style,difficulty):

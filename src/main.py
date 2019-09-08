@@ -1,5 +1,7 @@
 #imports
-from ./menus.py import *
+from menus import *
 #app
-if __name__ == "__main__":
+def main():
     main_menu()
+if __name__ == "__main__":
+    main()
