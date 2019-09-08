@@ -19,8 +19,20 @@ plays = pd.read_csv('input/plays.csv')
 
 #Functions to filter an porcess data
 
-def filtercoursesby(style,difficulty):
+def filtercoursesby(s,d):
     # Select a sub Dataframe and filter it by style an difficulty
-    df = courses[(courses['difficulty']==difficulty) & (courses['gameStyle']==style)]
+    difficulty = {
+        'e': 'easy'
+        'n': 'normal'
+        'x': 'expert'
+        's': 'superExpert'
+    }
+    style={
+        'b': 'marioBros',
+        '3': 'marioBros3',
+        'w': 'marioWorld',
+        'u': 'marioBrosU'
+    }
+    df = courses[(courses['difficulty']== difficulty[d].value) & (courses['gameStyle'] == style[s].value)]
     return df
 
