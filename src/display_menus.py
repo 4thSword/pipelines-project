@@ -31,8 +31,5 @@ def display_submenu_sorts(gameStyle,difficulty):
     print('------------------------------------------------')
     print('|  (L)ikes  | (M)ost Finished | Le(s)s Finished |')
     print('------------------------------------------------\n')
-    print('-----------------------------------------------------------')
-    print('| 2.- Select a Game Style:                                 |')
-    print('-----------------------------------------------------------')
-    print('| mario(B)ros | marioBros(3) | mario(W)orld | marioBros(U) |')
-    print('-----------------------------------------------------------\n')
+
+
