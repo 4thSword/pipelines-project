@@ -7,14 +7,15 @@ from os import system, name
 #Auxiliary functions:
  
 def clear(): 
-  
+    '''
     # for windows 
     if name == 'nt': 
         _ = system('cls') 
   
     # for mac and linux(here, os.name is 'posix') 
-    else: 
-        _ = system('clear') 
+    else:
+    '''     
+    _ = system('clear') 
 
 
 
