@@ -49,4 +49,37 @@ def submenu_sorts(subdf,gamestyle,difficulty):
 
 def submenu_selectrows(sorted_df,gamestyle,difficulty,choice):
     clear()
+    #displays menu
     display_submenu_selectrows(sorted_df,gamestyle,difficulty,choice)
+    #intriduce in how many level do you want to choose
+    max_levels = int( input('How many levels do you want to see?:\n'))
+    #filter df and pritn yor choose in terminal
+    sorted_df = sorted_df.groupby(['id','difficulty','gameStyle','maker','title','thumbnail','image','creation','likes','firstClear'], as_index=False).agg({'players':'sum','clears':'sum','attempts':'sum','clearRate':'mean'})
+    sorted_df.reset_index(inplace=True)
+    final_df = sorted_df.head(n=max_levels)
+    for index, row in final_df.iterrows():
+        print(
+        '''     {}-> {}
+        ------'''.format(index,row['title']))
+    #select a game
+    game_index = int(input('Choose a level number:'))    
+    game = final_df.iloc[game_index]
+
+    datashowselection(game)
+
+
+def datashowselection(game):
+    clear()
+    display_datashowselection(game)
+    option = input()
+    if option.lower()== 't':
+        terminal_data_show(game)
+    #elif option.lower() == 'p':
+    #   pdf_export(game)
+    else:datashowselection(game)
+
+def terminal_data_show(game):
+    clear()
+    print(game)
+
+
