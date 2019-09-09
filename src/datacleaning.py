@@ -5,12 +5,12 @@ import pandas as pd
 import numpy as np
 
 #Dataframes acquisition:
-clears = pd.read_csv('input/clears.csv',sep='\t')
-course_meta = pd.read_csv('input/course-meta.csv',sep='\t')
-courses = pd.read_csv('input/courses.csv', sep='\t')
-likes = pd.read_csv('input/likes.csv',sep='\t')
-players = pd.read_csv('input/players.csv', sep='\t')
-plays = pd.read_csv('input/plays.csv',sep='\t')
+#clears = pd.read_csv('input/clears.csv',sep='\t')
+course_meta = pd.read_csv('../input/course-meta.csv',sep='\t')
+courses = pd.read_csv('../input/courses.csv', sep='\t')
+likes = pd.read_csv('../input/likes.csv',sep='\t')
+#players = pd.read_csv('input/players.csv', sep='\t')
+#plays = pd.read_csv('input/plays.csv',sep='\t')
 
 #Data processing procedure:
 
@@ -29,9 +29,9 @@ def datasets_transformation():
 
 
 def app_inputfile_export():
-    fullgroupedinfo.to_csv('./input/fullgroupedinfo.csv')
+    fullgroupedinfo.to_csv('../input/fullgroupedinfo.csv')
 
 
 #script execution:
-datasets_transformation()
+fullgroupedinfo = datasets_transformation()
 app_inputfile_export()
