@@ -25,11 +25,11 @@ def addtwitchId(serie):
         request = authRequest(complete_url)
         try:
             twitch.append(request['data'][0]['id'])
-            print(request['data'][0]['id'],request['data'][0]['login'])
+            #print(request['data'][0]['id'],request['data'][0]['login'])
         except:
             twitch.append('no Twitch profile')
-            print('no Twitch profile')
-        time.sleep(0.6)
+            #print('no Twitch profile')
+        
         
     return twitch
 

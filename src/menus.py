@@ -1,5 +1,6 @@
 #imports:
 from display_menus import *
+from api_requests import addtwitchId
 import argparse
 from os import system, name
 
@@ -80,6 +81,11 @@ def datashowselection(game):
 
 def terminal_data_show(game):
     clear()
-    print(game)
+    twitch_resquest = [game['maker'],game['firstClear']]
 
+    twitch_data = addtwitchId(twitch_resquest)
+    
+    display_terminal_data_show(game,twitch_data)
+    
+    
 

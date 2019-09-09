@@ -79,3 +79,35 @@ def display_datashowselection(game):
     -------------------------------------------------
     '''.format(game['title']))
 
+def display_terminal_data_show(game,twitch_data):
+    print('''
+    ---------------------------------------
+    -   SUPER MARIO MAKER! Analytics      -
+    ---------------------------------------
+    ---------------
+    | LEVEL NAME: |
+    ---------------
+    {}
+    --------------
+    | Level Data |
+    --------------
+    -> Game Style:          {}
+    -> Difficulty:          {}
+    -> Likes:               {}
+    -> Number of Players:   {}
+    -> Total Attempts:      {}
+    -> Total Clears:        {}
+    -> Clear Rate:          {}
+
+    ------------------------------
+    | MAKER:                     |
+    ------------------------------
+    -> User:                {}
+    -> Twitch ID:           {}
+
+    ------------------------------
+    | FIRST CLEAR:               |
+    ------------------------------
+    -> User:                {}
+    -> Twitch ID:           {}
+    '''.format(game['title'],game['gameStyle'],game['difficulty'],game['likes'],game['players'],game['attempts'],game['clears'],game['clearRate'],game['maker'],twitch_data[0],game['firstClear'],twitch_data[1]))
