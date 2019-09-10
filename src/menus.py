@@ -17,7 +17,15 @@ def clear():
     '''     
     _ = system('clear') 
 
+def get_args(argv=None):
+    difficulty = ['e', 'n', 'x','s', None]
+    gamestyle = ['b','3','w','u', None]
 
+    parser = argparse.ArgumentParser(description="Arguments for filetring our data")
+    # parser.add_argument("-x", "--xxx", type=str,)
+    parser.add_argument("difficulty", nargs='?',default = None, type=str, choices=difficulty, help="[select:(e)asy | (n)ormal | e(x)pert | (s)uperExpert]")
+    parser.add_argument("gamestyle",nargs='?', default = None, type=str, choices=gamestyle, help="[Select: mario(B)ros | marioBros(3) | mario(W)orld | marioBros(U)]")
+    return parser.parse_args(argv)
 
 #Main Menu:
 
