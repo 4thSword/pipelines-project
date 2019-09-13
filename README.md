@@ -8,14 +8,14 @@ In this project It is requested to find a Dataset in Kaggle and get conclusions 
 
 I would like to introduce my SUPER MARIO MAKER Analytics. 
 
-Using 3 .csv files from the 7 publiseh in [SMMnet](https://www.kaggle.com/leomauro/smmnet)., leaning it and creatng only 1 files with data about Super mario maker levels and the users statistics.
+Using 3 .csv files from the 7 publiseh in [SMMnet](https://www.kaggle.com/leomauro/smmnet), leaning it and creatng only 1 files with data about Super mario maker levels and the users statistics.
 
 The API used to enrich data is the Twitch API and its use is implemented durind the app execution.
 
 
 ## First step, data cleaning
 
-Before starting to use the app, it is necessary to download from the [dataset page](https://www.kaggle.com/leomauro/smmnet)files called:
+Before starting to use the app, it is necessary to download from the [dataset page](https://www.kaggle.com/leomauro/smmnet) the files files called:
 
 * couuses.csv
 * course_meta.csv
@@ -40,8 +40,8 @@ Afterwars it is possible to select one of them.
 
 ### Data Visualization selection:
 
-let the user choose if want to get the info printed in terminal o exported to a pdf file. (PDF export si not implemented yet.)
+Let the user choose if want to get the info printed in terminal o exported to a pdf file. (PDF export si not implemented yet.)
 
 ### Game stats:
 
-Show all the game stats and check if the level maker and the first player in accomplish the level have Twitch account and shows thier Twitch ID if exists.
+Show all the game stats and check if the level maker and the first player in accomplish the level have Twitch account and shows their Twitch ID if exists.
